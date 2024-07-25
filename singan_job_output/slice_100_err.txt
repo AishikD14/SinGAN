@@ -1,0 +1,376 @@
+/cm/local/apps/slurm/var/spool/job35518/slurm_script: line 16: activate: No such file or directory
+Namespace(device='cuda', device_ids=[0], gen_model='g_multivanilla', dis_model='d_vanilla', min_features=32, max_features=32, num_blocks=5, kernel_size=3, padding=0, root='/home/aideb/SinGAN/images/slice_100.png', min_size=25, max_size=650, scale_factor_init=0.75, noise_weight=0.1, batch_size=1, crop_size=0, num_steps=4000, lr=0.0005, gen_betas=[0.5, 0.9], dis_betas=[0.5, 0.9], num_critic=1, step_size=2000, gamma=0.1, penalty_weight=0.1, reconstruction_weight=10.0, adversarial_weight=1.0, seed=2026, print_every=200, eval_every=100, results_dir='./results', save='2024-07-23_00-26-40', evaluation=False, model_to_load='', amps_to_load='', use_tb=False, save_path='./results/2024-07-23_00-26-40')
+MultiVanilla(
+  (curr): Vanilla(
+    (features): Sequential(
+      (0): BasicBlock(
+        (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1))
+        (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+      )
+      (1): BasicBlock(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+        (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+      )
+      (2): BasicBlock(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+        (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+      )
+      (3): BasicBlock(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+        (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+      )
+    )
+    (features_to_image): Sequential(
+      (0): Conv2d(32, 3, kernel_size=(3, 3), stride=(1, 1))
+      (1): Tanh()
+    )
+  )
+  (prev): Module()
+)
+Vanilla(
+  (features): Sequential(
+    (0): BasicBlock(
+      (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1))
+      (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+    )
+    (1): BasicBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+    )
+    (2): BasicBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+    )
+    (3): BasicBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+    )
+  )
+  (classifier): Conv2d(32, 1, kernel_size=(3, 3), stride=(1, 1))
+)
+Number of parameters in generator: 29763
+Number of parameters in discriminator: 29185
+
+Scale #1
+Iteration 0, D: 0.063888, D_r: -0.027994, D_f: 0.049905, D_gp: 0.419775, G: 9.16512, G_recon: 0.91933, G_adv: -0.02816
+/home/aideb/miniconda3/envs/senv/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Iteration 200, D: 0.174499, D_r: -3.172661, D_f: -1.873951, D_gp: 52.211109, G: 1.97666, G_recon: 0.03900, G_adv: 1.58667
+Iteration 400, D: -2.242589, D_r: -0.261475, D_f: -2.923901, D_gp: 9.427865, G: 3.65176, G_recon: 0.02236, G_adv: 3.42820
+Iteration 600, D: -2.364579, D_r: 3.735006, D_f: -7.668003, D_gp: 15.684182, G: 8.02872, G_recon: 0.01742, G_adv: 7.85451
+Iteration 800, D: -2.189941, D_r: 3.981783, D_f: -8.023053, D_gp: 18.513288, G: 8.01313, G_recon: 0.01486, G_adv: 7.86449
+Iteration 1000, D: -2.555585, D_r: 5.585342, D_f: -9.717564, D_gp: 15.766359, G: 10.32382, G_recon: 0.01858, G_adv: 10.13807
+Iteration 1200, D: -2.347728, D_r: 5.207876, D_f: -9.501659, D_gp: 19.460558, G: 9.58156, G_recon: 0.01492, G_adv: 9.43240
+Iteration 1400, D: -3.620177, D_r: 6.572595, D_f: -11.853601, D_gp: 16.608294, G: 12.01969, G_recon: 0.01261, G_adv: 11.89356
+Iteration 1600, D: -3.413164, D_r: 3.709960, D_f: -8.464240, D_gp: 13.411158, G: 8.95621, G_recon: 0.00889, G_adv: 8.86735
+Iteration 1800, D: -2.328690, D_r: 4.929477, D_f: -8.883315, D_gp: 16.251486, G: 9.17989, G_recon: 0.00927, G_adv: 9.08722
+Iteration 2000, D: -2.578227, D_r: 5.776239, D_f: -9.928816, D_gp: 15.743496, G: 10.23357, G_recon: 0.00930, G_adv: 10.14053
+Iteration 2200, D: -2.208730, D_r: 4.970372, D_f: -8.849297, D_gp: 16.701946, G: 8.93138, G_recon: 0.00701, G_adv: 8.86131
+Iteration 2400, D: -2.143172, D_r: 4.759937, D_f: -9.090162, D_gp: 21.870533, G: 9.14481, G_recon: 0.00704, G_adv: 9.07438
+Iteration 2600, D: -2.333589, D_r: 4.767768, D_f: -8.929539, D_gp: 18.281818, G: 9.01446, G_recon: 0.00669, G_adv: 8.94752
+Iteration 2800, D: -2.362879, D_r: 4.674268, D_f: -8.951721, D_gp: 19.145742, G: 9.00656, G_recon: 0.00634, G_adv: 8.94318
+Iteration 3000, D: -2.037635, D_r: 5.032570, D_f: -9.093061, D_gp: 20.228569, G: 9.16924, G_recon: 0.00685, G_adv: 9.10073
+Iteration 3200, D: -2.253260, D_r: 5.133190, D_f: -9.189928, D_gp: 18.034782, G: 9.21484, G_recon: 0.00664, G_adv: 9.14846
+Iteration 3400, D: -2.091062, D_r: 5.057634, D_f: -8.881775, D_gp: 17.330788, G: 8.98074, G_recon: 0.00603, G_adv: 8.92044
+Iteration 3600, D: -2.203610, D_r: 5.252007, D_f: -9.587788, D_gp: 21.321711, G: 9.69228, G_recon: 0.00609, G_adv: 9.63139
+Iteration 3800, D: -2.329518, D_r: 5.094196, D_f: -9.072767, D_gp: 16.490532, G: 9.12596, G_recon: 0.00599, G_adv: 9.06607
+Iteration 4000, D: -2.672542, D_r: 4.980978, D_f: -9.664023, D_gp: 20.105036, G: 9.73334, G_recon: 0.00597, G_adv: 9.67369
+
+Scale #2
+Iteration 0, D: -0.719613, D_r: 8.393204, D_f: -10.193765, D_gp: 10.809480, G: 17.13501, G_recon: 0.63077, G_adv: 10.82735
+Iteration 200, D: -1.268871, D_r: 8.491768, D_f: -11.770554, D_gp: 20.099150, G: 12.16977, G_recon: 0.06255, G_adv: 11.54423
+Iteration 400, D: -1.349928, D_r: 10.513084, D_f: -13.459080, D_gp: 15.960675, G: 14.49284, G_recon: 0.05178, G_adv: 13.97504
+Iteration 600, D: -1.074386, D_r: 10.051317, D_f: -11.635424, D_gp: 5.097199, G: 11.87316, G_recon: 0.02659, G_adv: 11.60730
+Iteration 800, D: -0.710471, D_r: 9.337468, D_f: -10.678341, D_gp: 6.304016, G: 11.26780, G_recon: 0.02609, G_adv: 11.00692
+Iteration 1000, D: -0.446165, D_r: 8.873473, D_f: -10.023569, D_gp: 7.039311, G: 10.44587, G_recon: 0.02494, G_adv: 10.19645
+Iteration 1200, D: -0.587152, D_r: 6.580173, D_f: -7.584907, D_gp: 4.175825, G: 7.91028, G_recon: 0.02436, G_adv: 7.66669
+Iteration 1400, D: -0.823909, D_r: 5.809402, D_f: -7.138814, D_gp: 5.055027, G: 7.58068, G_recon: 0.02258, G_adv: 7.35485
+Iteration 1600, D: -0.582198, D_r: 6.510832, D_f: -7.556298, D_gp: 4.632683, G: 7.83998, G_recon: 0.02222, G_adv: 7.61782
+Iteration 1800, D: -0.698860, D_r: 5.713109, D_f: -6.866189, D_gp: 4.542212, G: 7.19135, G_recon: 0.02277, G_adv: 6.96368
+Iteration 2000, D: -0.591547, D_r: 6.564488, D_f: -7.509305, D_gp: 3.532701, G: 7.73510, G_recon: 0.02135, G_adv: 7.52157
+Iteration 2200, D: -0.718286, D_r: 5.995877, D_f: -7.101758, D_gp: 3.875947, G: 7.29319, G_recon: 0.01928, G_adv: 7.10042
+Iteration 2400, D: -0.593861, D_r: 5.915524, D_f: -6.955615, D_gp: 4.462305, G: 7.16548, G_recon: 0.01927, G_adv: 6.97279
+Iteration 2600, D: -0.907552, D_r: 5.805893, D_f: -7.030634, D_gp: 3.171885, G: 7.22169, G_recon: 0.01901, G_adv: 7.03163
+Iteration 2800, D: -0.559126, D_r: 5.832634, D_f: -6.820415, D_gp: 4.286552, G: 7.01445, G_recon: 0.01895, G_adv: 6.82497
+Iteration 3000, D: -0.854676, D_r: 5.769296, D_f: -7.118244, D_gp: 4.942713, G: 7.31646, G_recon: 0.01891, G_adv: 7.12733
+Iteration 3200, D: -0.487573, D_r: 5.819897, D_f: -6.819188, D_gp: 5.117177, G: 7.02303, G_recon: 0.01885, G_adv: 6.83457
+Iteration 3400, D: -0.575937, D_r: 5.802135, D_f: -6.833499, D_gp: 4.554277, G: 7.02799, G_recon: 0.01880, G_adv: 6.84003
+Iteration 3600, D: -0.618706, D_r: 5.741321, D_f: -6.846471, D_gp: 4.864438, G: 7.04072, G_recon: 0.01870, G_adv: 6.85374
+Iteration 3800, D: -0.604925, D_r: 5.747830, D_f: -6.788311, D_gp: 4.355561, G: 6.96648, G_recon: 0.01859, G_adv: 6.78055
+Iteration 4000, D: -0.829475, D_r: 5.798828, D_f: -7.057239, D_gp: 4.289359, G: 7.23917, G_recon: 0.01844, G_adv: 7.05482
+
+Scale #3
+Iteration 0, D: -0.221207, D_r: 6.794025, D_f: -7.428414, D_gp: 4.131821, G: 11.26311, G_recon: 0.35189, G_adv: 7.74418
+Iteration 200, D: -0.339704, D_r: 5.245230, D_f: -5.751489, D_gp: 1.665554, G: 5.82068, G_recon: 0.01442, G_adv: 5.67646
+Iteration 400, D: -0.291090, D_r: 4.734708, D_f: -5.229753, D_gp: 2.039545, G: 5.36758, G_recon: 0.01014, G_adv: 5.26613
+Iteration 600, D: -0.284144, D_r: 4.763844, D_f: -5.250370, D_gp: 2.023817, G: 5.47394, G_recon: 0.00832, G_adv: 5.39075
+Iteration 800, D: -0.235365, D_r: 4.560127, D_f: -4.988608, D_gp: 1.931160, G: 5.14912, G_recon: 0.00816, G_adv: 5.06755
+Iteration 1000, D: -0.312122, D_r: 4.936556, D_f: -5.450343, D_gp: 2.016643, G: 5.47096, G_recon: 0.00770, G_adv: 5.39398
+Iteration 1200, D: -0.287895, D_r: 5.002610, D_f: -5.495118, D_gp: 2.046126, G: 5.73242, G_recon: 0.00755, G_adv: 5.65694
+Iteration 1400, D: -0.281746, D_r: 5.075910, D_f: -5.527092, D_gp: 1.694361, G: 5.63843, G_recon: 0.00745, G_adv: 5.56392
+Iteration 1600, D: -0.313073, D_r: 5.212128, D_f: -5.705011, D_gp: 1.798102, G: 5.75660, G_recon: 0.00674, G_adv: 5.68923
+Iteration 1800, D: -0.207613, D_r: 4.901120, D_f: -5.391840, D_gp: 2.831066, G: 5.55364, G_recon: 0.00626, G_adv: 5.49107
+Iteration 2000, D: -0.319937, D_r: 4.790606, D_f: -5.351149, D_gp: 2.406068, G: 5.40109, G_recon: 0.00709, G_adv: 5.33016
+Iteration 2200, D: -0.337420, D_r: 4.721456, D_f: -5.261159, D_gp: 2.022843, G: 5.30811, G_recon: 0.00473, G_adv: 5.26078
+Iteration 2400, D: -0.309962, D_r: 4.633213, D_f: -5.130104, D_gp: 1.869295, G: 5.17269, G_recon: 0.00469, G_adv: 5.12576
+Iteration 2600, D: -0.301986, D_r: 4.646071, D_f: -5.122668, D_gp: 1.746118, G: 5.16623, G_recon: 0.00476, G_adv: 5.11868
+Iteration 2800, D: -0.338047, D_r: 4.546815, D_f: -5.020905, D_gp: 1.360433, G: 5.06223, G_recon: 0.00470, G_adv: 5.01525
+Iteration 3000, D: -0.361333, D_r: 4.476418, D_f: -5.017394, D_gp: 1.796430, G: 5.07482, G_recon: 0.00468, G_adv: 5.02806
+Iteration 3200, D: -0.296698, D_r: 4.474037, D_f: -4.940593, D_gp: 1.698576, G: 4.97524, G_recon: 0.00463, G_adv: 4.92895
+Iteration 3400, D: -0.289652, D_r: 4.486603, D_f: -4.962527, D_gp: 1.862721, G: 5.01243, G_recon: 0.00457, G_adv: 4.96674
+Iteration 3600, D: -0.283925, D_r: 4.515614, D_f: -4.993762, D_gp: 1.942239, G: 5.03071, G_recon: 0.00461, G_adv: 4.98457
+Iteration 3800, D: -0.265306, D_r: 4.427640, D_f: -4.903647, D_gp: 2.107001, G: 4.96060, G_recon: 0.00454, G_adv: 4.91524
+Iteration 4000, D: -0.367989, D_r: 4.438506, D_f: -4.963835, D_gp: 1.573399, G: 5.02186, G_recon: 0.00452, G_adv: 4.97661
+
+Scale #4
+Iteration 0, D: -0.001823, D_r: 5.191684, D_f: -5.420030, D_gp: 2.265226, G: 5.72472, G_recon: 0.02475, G_adv: 5.47719
+Iteration 200, D: -0.158518, D_r: 4.698367, D_f: -4.950040, D_gp: 0.931557, G: 5.05829, G_recon: 0.00806, G_adv: 4.97769
+Iteration 400, D: -0.185713, D_r: 4.779218, D_f: -5.061337, D_gp: 0.964049, G: 5.18443, G_recon: 0.00789, G_adv: 5.10552
+Iteration 600, D: -0.146673, D_r: 5.104073, D_f: -5.397691, D_gp: 1.469457, G: 5.52423, G_recon: 0.00694, G_adv: 5.45484
+Iteration 800, D: -0.184841, D_r: 5.344004, D_f: -5.651392, D_gp: 1.225468, G: 5.72287, G_recon: 0.00802, G_adv: 5.64270
+Iteration 1000, D: -0.193225, D_r: 5.439903, D_f: -5.732922, D_gp: 0.997940, G: 5.68635, G_recon: 0.00653, G_adv: 5.62109
+Iteration 1200, D: -0.158359, D_r: 4.968071, D_f: -5.244942, D_gp: 1.185113, G: 5.26605, G_recon: 0.00608, G_adv: 5.20520
+Iteration 1400, D: -0.191774, D_r: 4.865107, D_f: -5.132164, D_gp: 0.752825, G: 5.19478, G_recon: 0.00517, G_adv: 5.14311
+Iteration 1600, D: -0.164910, D_r: 5.358331, D_f: -5.628923, D_gp: 1.056824, G: 5.62736, G_recon: 0.00590, G_adv: 5.56835
+Iteration 1800, D: -0.163644, D_r: 5.216293, D_f: -5.500020, D_gp: 1.200821, G: 5.61597, G_recon: 0.00542, G_adv: 5.56181
+Iteration 2000, D: -0.190598, D_r: 5.269125, D_f: -5.584321, D_gp: 1.245993, G: 5.54981, G_recon: 0.00530, G_adv: 5.49677
+Iteration 2200, D: -0.215275, D_r: 5.219679, D_f: -5.530694, D_gp: 0.957397, G: 5.58334, G_recon: 0.00413, G_adv: 5.54206
+Iteration 2400, D: -0.250112, D_r: 5.182029, D_f: -5.536048, D_gp: 1.039074, G: 5.57984, G_recon: 0.00413, G_adv: 5.53856
+Iteration 2600, D: -0.232766, D_r: 5.184299, D_f: -5.508145, D_gp: 0.910800, G: 5.54867, G_recon: 0.00407, G_adv: 5.50793
+Iteration 2800, D: -0.170960, D_r: 5.201382, D_f: -5.507809, D_gp: 1.354668, G: 5.54951, G_recon: 0.00412, G_adv: 5.50831
+Iteration 3000, D: -0.208460, D_r: 5.140378, D_f: -5.439133, D_gp: 0.902949, G: 5.47095, G_recon: 0.00405, G_adv: 5.43050
+Iteration 3200, D: -0.202827, D_r: 5.161385, D_f: -5.465494, D_gp: 1.012814, G: 5.50818, G_recon: 0.00404, G_adv: 5.46777
+Iteration 3400, D: -0.159914, D_r: 5.166123, D_f: -5.465116, D_gp: 1.390785, G: 5.50923, G_recon: 0.00399, G_adv: 5.46928
+Iteration 3600, D: -0.169332, D_r: 5.139469, D_f: -5.429506, D_gp: 1.207048, G: 5.47196, G_recon: 0.00399, G_adv: 5.43210
+Iteration 3800, D: -0.165876, D_r: 5.184542, D_f: -5.477371, D_gp: 1.269533, G: 5.51599, G_recon: 0.00392, G_adv: 5.47682
+Iteration 4000, D: -0.208591, D_r: 5.171290, D_f: -5.482206, D_gp: 1.023249, G: 5.52772, G_recon: 0.00397, G_adv: 5.48799
+
+Scale #5
+Iteration 0, D: -0.005509, D_r: -0.203200, D_f: 0.168896, D_gp: 0.287945, G: 1.37345, G_recon: 0.14899, G_adv: -0.11644
+Iteration 200, D: -0.104995, D_r: -2.295034, D_f: 2.113322, D_gp: 0.767165, G: -1.94236, G_recon: 0.01138, G_adv: -2.05612
+Iteration 400, D: -0.085114, D_r: -2.808141, D_f: 2.665655, D_gp: 0.573725, G: -2.58551, G_recon: 0.00946, G_adv: -2.68015
+Iteration 600, D: -0.117138, D_r: -3.264921, D_f: 3.100032, D_gp: 0.477513, G: -2.94661, G_recon: 0.00704, G_adv: -3.01703
+Iteration 800, D: -0.099280, D_r: -3.362822, D_f: 3.172133, D_gp: 0.914083, G: -3.01610, G_recon: 0.00619, G_adv: -3.07798
+Iteration 1000, D: -0.107829, D_r: -3.178708, D_f: 2.990845, D_gp: 0.800332, G: -2.98520, G_recon: 0.00534, G_adv: -3.03859
+Iteration 1200, D: -0.153284, D_r: -3.364575, D_f: 3.142185, D_gp: 0.691057, G: -3.10930, G_recon: 0.00552, G_adv: -3.16452
+Iteration 1400, D: -0.095611, D_r: -3.403268, D_f: 3.184779, D_gp: 1.228776, G: -3.02040, G_recon: 0.00648, G_adv: -3.08521
+Iteration 1600, D: -0.088493, D_r: -3.346094, D_f: 3.125564, D_gp: 1.320366, G: -3.11494, G_recon: 0.00558, G_adv: -3.17079
+Iteration 1800, D: -0.132998, D_r: -3.098596, D_f: 2.889372, D_gp: 0.762264, G: -2.66520, G_recon: 0.00711, G_adv: -2.73630
+Iteration 2000, D: -0.145057, D_r: -3.296581, D_f: 3.070359, D_gp: 0.811642, G: -2.96123, G_recon: 0.00539, G_adv: -3.01517
+Iteration 2200, D: -0.091895, D_r: -3.144929, D_f: 2.900924, D_gp: 1.521103, G: -2.85482, G_recon: 0.00387, G_adv: -2.89353
+Iteration 2400, D: -0.121856, D_r: -2.935869, D_f: 2.708735, D_gp: 1.052778, G: -2.66439, G_recon: 0.00381, G_adv: -2.70252
+Iteration 2600, D: -0.089542, D_r: -2.765975, D_f: 2.531856, D_gp: 1.445772, G: -2.49593, G_recon: 0.00375, G_adv: -2.53343
+Iteration 2800, D: -0.093188, D_r: -2.688157, D_f: 2.457895, D_gp: 1.370734, G: -2.42008, G_recon: 0.00376, G_adv: -2.45765
+Iteration 3000, D: -0.135357, D_r: -2.622457, D_f: 2.410650, D_gp: 0.764494, G: -2.37918, G_recon: 0.00382, G_adv: -2.41743
+Iteration 3200, D: -0.104999, D_r: -2.639883, D_f: 2.411788, D_gp: 1.230950, G: -2.36088, G_recon: 0.00372, G_adv: -2.39804
+Iteration 3400, D: -0.141004, D_r: -2.583503, D_f: 2.372958, D_gp: 0.695412, G: -2.33269, G_recon: 0.00364, G_adv: -2.36909
+Iteration 3600, D: -0.140412, D_r: -2.560104, D_f: 2.338431, D_gp: 0.812609, G: -2.30260, G_recon: 0.00365, G_adv: -2.33914
+Iteration 3800, D: -0.160487, D_r: -2.531934, D_f: 2.310687, D_gp: 0.607607, G: -2.27543, G_recon: 0.00368, G_adv: -2.31219
+Iteration 4000, D: -0.091972, D_r: -2.476030, D_f: 2.246569, D_gp: 1.374891, G: -2.21001, G_recon: 0.00362, G_adv: -2.24617
+
+Scale #6
+Iteration 0, D: 0.035011, D_r: -2.417060, D_f: 2.362268, D_gp: 0.898033, G: -2.00196, G_recon: 0.03280, G_adv: -2.32992
+Iteration 200, D: -0.045932, D_r: -2.155899, D_f: 2.065497, D_gp: 0.444696, G: -2.05945, G_recon: 0.00395, G_adv: -2.09893
+Iteration 400, D: -0.075991, D_r: -2.189702, D_f: 2.085037, D_gp: 0.286737, G: -2.07091, G_recon: 0.00226, G_adv: -2.09355
+Iteration 600, D: -0.055887, D_r: -2.156350, D_f: 2.019410, D_gp: 0.810530, G: -1.94847, G_recon: 0.00261, G_adv: -1.97457
+Iteration 800, D: -0.071467, D_r: -2.077441, D_f: 1.913299, D_gp: 0.926759, G: -1.88939, G_recon: 0.00192, G_adv: -1.90854
+Iteration 1000, D: -0.101018, D_r: -2.096851, D_f: 1.949464, D_gp: 0.463685, G: -1.94093, G_recon: 0.00180, G_adv: -1.95891
+Iteration 1200, D: -0.095012, D_r: -1.790254, D_f: 1.638438, D_gp: 0.568035, G: -1.58272, G_recon: 0.00199, G_adv: -1.60262
+Iteration 1400, D: -0.111984, D_r: -1.562092, D_f: 1.383577, D_gp: 0.665304, G: -1.37257, G_recon: 0.00223, G_adv: -1.39492
+Iteration 1600, D: -0.117790, D_r: -1.875572, D_f: 1.724537, D_gp: 0.332448, G: -1.72814, G_recon: 0.00156, G_adv: -1.74374
+Iteration 1800, D: -0.131952, D_r: -1.654053, D_f: 1.459133, D_gp: 0.629672, G: -1.35953, G_recon: 0.00140, G_adv: -1.37357
+Iteration 2000, D: -0.136263, D_r: -1.690351, D_f: 1.516371, D_gp: 0.377177, G: -1.47582, G_recon: 0.00161, G_adv: -1.49190
+Iteration 2200, D: -0.106026, D_r: -1.768859, D_f: 1.550176, D_gp: 1.126569, G: -1.53415, G_recon: 0.00070, G_adv: -1.54116
+Iteration 2400, D: -0.147528, D_r: -1.771665, D_f: 1.562343, D_gp: 0.617931, G: -1.55602, G_recon: 0.00069, G_adv: -1.56295
+Iteration 2600, D: -0.107844, D_r: -1.721430, D_f: 1.499489, D_gp: 1.140969, G: -1.49143, G_recon: 0.00061, G_adv: -1.49757
+Iteration 2800, D: -0.174695, D_r: -1.758395, D_f: 1.529433, D_gp: 0.542664, G: -1.51262, G_recon: 0.00059, G_adv: -1.51850
+Iteration 3000, D: -0.086978, D_r: -1.776678, D_f: 1.542393, D_gp: 1.473070, G: -1.53427, G_recon: 0.00061, G_adv: -1.54035
+Iteration 3200, D: -0.097625, D_r: -1.698522, D_f: 1.460343, D_gp: 1.405529, G: -1.45450, G_recon: 0.00061, G_adv: -1.46058
+Iteration 3400, D: -0.107626, D_r: -1.694666, D_f: 1.465122, D_gp: 1.219173, G: -1.46689, G_recon: 0.00059, G_adv: -1.47275
+Iteration 3600, D: -0.107758, D_r: -1.688942, D_f: 1.446823, D_gp: 1.343610, G: -1.43620, G_recon: 0.00055, G_adv: -1.44174
+Iteration 3800, D: -0.150568, D_r: -1.572221, D_f: 1.362845, D_gp: 0.588086, G: -1.35206, G_recon: 0.00053, G_adv: -1.35741
+Iteration 4000, D: -0.154435, D_r: -1.651247, D_f: 1.440612, D_gp: 0.562003, G: -1.43543, G_recon: 0.00054, G_adv: -1.44078
+
+Scale #7
+Iteration 0, D: -0.016028, D_r: -1.628966, D_f: 1.545884, D_gp: 0.670537, G: -1.09147, G_recon: 0.03982, G_adv: -1.48966
+Iteration 200, D: -0.031168, D_r: -1.281228, D_f: 1.206178, D_gp: 0.438807, G: -1.15741, G_recon: 0.00208, G_adv: -1.17819
+Iteration 400, D: -0.051874, D_r: -1.234356, D_f: 1.141308, D_gp: 0.411740, G: -1.11861, G_recon: 0.00169, G_adv: -1.13556
+Iteration 600, D: -0.034021, D_r: -0.856821, D_f: 0.735338, D_gp: 0.874620, G: -0.69194, G_recon: 0.00138, G_adv: -0.70572
+Iteration 800, D: -0.060366, D_r: -1.347060, D_f: 1.242533, D_gp: 0.441605, G: -1.17547, G_recon: 0.00187, G_adv: -1.19416
+Iteration 1000, D: -0.088981, D_r: -1.284830, D_f: 1.152893, D_gp: 0.429565, G: -1.12034, G_recon: 0.00111, G_adv: -1.13146
+Iteration 1200, D: -0.085912, D_r: -0.856348, D_f: 0.736765, D_gp: 0.336710, G: -0.72449, G_recon: 0.00121, G_adv: -0.73660
+Iteration 1400, D: -0.110276, D_r: -1.167545, D_f: 1.021576, D_gp: 0.356926, G: -0.95827, G_recon: 0.00091, G_adv: -0.96736
+Iteration 1600, D: -0.090999, D_r: -1.128514, D_f: 0.989775, D_gp: 0.477398, G: -0.89865, G_recon: 0.00094, G_adv: -0.90806
+Iteration 1800, D: -0.102642, D_r: -0.898421, D_f: 0.764102, D_gp: 0.316763, G: -0.71454, G_recon: 0.00079, G_adv: -0.72240
+Iteration 2000, D: -0.075736, D_r: -0.838912, D_f: 0.687850, D_gp: 0.753256, G: -0.66580, G_recon: 0.00081, G_adv: -0.67390
+Iteration 2200, D: -0.128441, D_r: -0.850767, D_f: 0.674926, D_gp: 0.474000, G: -0.67382, G_recon: 0.00053, G_adv: -0.67910
+Iteration 2400, D: -0.065248, D_r: -0.766409, D_f: 0.595325, D_gp: 1.058358, G: -0.58814, G_recon: 0.00050, G_adv: -0.59319
+Iteration 2600, D: -0.055798, D_r: -0.748371, D_f: 0.588870, D_gp: 1.037028, G: -0.58228, G_recon: 0.00055, G_adv: -0.58778
+Iteration 2800, D: -0.056400, D_r: -0.777636, D_f: 0.580756, D_gp: 1.404808, G: -0.57689, G_recon: 0.00045, G_adv: -0.58139
+Iteration 3000, D: -0.127554, D_r: -0.750270, D_f: 0.547326, D_gp: 0.753896, G: -0.53910, G_recon: 0.00040, G_adv: -0.54311
+Iteration 3200, D: -0.127311, D_r: -0.695840, D_f: 0.523112, D_gp: 0.454177, G: -0.51635, G_recon: 0.00053, G_adv: -0.52163
+Iteration 3400, D: -0.120463, D_r: -0.799435, D_f: 0.612088, D_gp: 0.668844, G: -0.60756, G_recon: 0.00041, G_adv: -0.61161
+Iteration 3600, D: -0.141977, D_r: -0.668023, D_f: 0.466962, D_gp: 0.590843, G: -0.46392, G_recon: 0.00043, G_adv: -0.46820
+Iteration 3800, D: -0.090761, D_r: -0.719970, D_f: 0.520632, D_gp: 1.085772, G: -0.51520, G_recon: 0.00044, G_adv: -0.51960
+Iteration 4000, D: -0.139248, D_r: -0.789595, D_f: 0.590842, D_gp: 0.595051, G: -0.58087, G_recon: 0.00040, G_adv: -0.58483
+
+Scale #8
+Iteration 0, D: -0.006998, D_r: -0.749389, D_f: 0.661428, D_gp: 0.809630, G: -0.22634, G_recon: 0.02857, G_adv: -0.51206
+Iteration 200, D: -0.051297, D_r: -1.587787, D_f: 1.492648, D_gp: 0.438416, G: -1.46117, G_recon: 0.00430, G_adv: -1.50422
+Iteration 400, D: -0.049812, D_r: -1.224178, D_f: 1.108637, D_gp: 0.657286, G: -1.10170, G_recon: 0.00418, G_adv: -1.14348
+Iteration 600, D: -0.056733, D_r: -0.949846, D_f: 0.862494, D_gp: 0.306184, G: -0.77334, G_recon: 0.00392, G_adv: -0.81257
+Iteration 800, D: -0.031078, D_r: -0.818647, D_f: 0.757215, D_gp: 0.303533, G: -0.71853, G_recon: 0.00385, G_adv: -0.75700
+Iteration 1000, D: -0.041084, D_r: -1.296075, D_f: 1.177545, D_gp: 0.774458, G: -1.05504, G_recon: 0.00417, G_adv: -1.09674
+Iteration 1200, D: -0.061627, D_r: -1.274994, D_f: 1.180825, D_gp: 0.325424, G: -1.17156, G_recon: 0.00439, G_adv: -1.21549
+Iteration 1400, D: -0.048193, D_r: -1.250211, D_f: 1.167923, D_gp: 0.340947, G: -1.07380, G_recon: 0.00405, G_adv: -1.11430
+Iteration 1600, D: -0.056182, D_r: -0.904003, D_f: 0.822436, D_gp: 0.253852, G: -0.76494, G_recon: 0.00446, G_adv: -0.80959
+Iteration 1800, D: -0.040323, D_r: -1.115064, D_f: 1.043347, D_gp: 0.313934, G: -0.98420, G_recon: 0.00364, G_adv: -1.02057
+Iteration 2000, D: -0.042223, D_r: -1.033523, D_f: 0.930570, D_gp: 0.607297, G: -0.85999, G_recon: 0.00421, G_adv: -0.90214
+Iteration 2200, D: -0.064584, D_r: -1.038218, D_f: 0.930426, D_gp: 0.432087, G: -0.90525, G_recon: 0.00318, G_adv: -0.93709
+Iteration 2400, D: -0.057708, D_r: -0.932717, D_f: 0.838934, D_gp: 0.360754, G: -0.80261, G_recon: 0.00327, G_adv: -0.83529
+Iteration 2600, D: -0.065048, D_r: -0.812151, D_f: 0.710407, D_gp: 0.366954, G: -0.67565, G_recon: 0.00315, G_adv: -0.70715
+Iteration 2800, D: -0.057711, D_r: -0.862731, D_f: 0.763182, D_gp: 0.418386, G: -0.72863, G_recon: 0.00313, G_adv: -0.75993
+Iteration 3000, D: -0.055474, D_r: -0.833206, D_f: 0.721543, D_gp: 0.561890, G: -0.69549, G_recon: 0.00315, G_adv: -0.72694
+Iteration 3200, D: -0.060411, D_r: -0.858127, D_f: 0.748360, D_gp: 0.493564, G: -0.71665, G_recon: 0.00311, G_adv: -0.74777
+Iteration 3400, D: -0.061923, D_r: -0.797086, D_f: 0.695302, D_gp: 0.398616, G: -0.66317, G_recon: 0.00315, G_adv: -0.69469
+Iteration 3600, D: -0.068443, D_r: -0.694492, D_f: 0.585385, D_gp: 0.406642, G: -0.55480, G_recon: 0.00310, G_adv: -0.58578
+Iteration 3800, D: -0.063178, D_r: -0.753327, D_f: 0.644175, D_gp: 0.459736, G: -0.60305, G_recon: 0.00311, G_adv: -0.63416
+Iteration 4000, D: -0.072378, D_r: -0.666705, D_f: 0.551033, D_gp: 0.432941, G: -0.51654, G_recon: 0.00309, G_adv: -0.54740
+
+Scale #9
+Iteration 0, D: 0.027598, D_r: 0.063710, D_f: -0.060627, D_gp: 0.245153, G: 1.90363, G_recon: 0.18004, G_adv: 0.10327
+Iteration 200, D: 0.030943, D_r: -1.588474, D_f: 1.583499, D_gp: 0.359179, G: -1.61457, G_recon: 0.00340, G_adv: -1.64856
+Iteration 400, D: 0.007883, D_r: -2.309004, D_f: 2.281309, D_gp: 0.355775, G: -2.26085, G_recon: 0.00414, G_adv: -2.30227
+Iteration 600, D: 0.008295, D_r: -1.857823, D_f: 1.836065, D_gp: 0.300530, G: -1.73908, G_recon: 0.00707, G_adv: -1.80977
+Iteration 800, D: 0.016408, D_r: -2.646806, D_f: 2.628747, D_gp: 0.344677, G: -2.56474, G_recon: 0.00618, G_adv: -2.62656
+Iteration 1000, D: 0.049177, D_r: -2.500253, D_f: 2.515496, D_gp: 0.339348, G: -2.42370, G_recon: 0.00338, G_adv: -2.45748
+Iteration 1200, D: 0.062520, D_r: -2.713932, D_f: 2.742669, D_gp: 0.337824, G: -2.68976, G_recon: 0.00474, G_adv: -2.73711
+Iteration 1400, D: 0.027623, D_r: -2.823571, D_f: 2.822788, D_gp: 0.284067, G: -2.75841, G_recon: 0.00323, G_adv: -2.79071
+Iteration 1600, D: 0.028218, D_r: -1.909837, D_f: 1.884768, D_gp: 0.532872, G: -1.85035, G_recon: 0.00367, G_adv: -1.88708
+Iteration 1800, D: 0.035059, D_r: -2.414668, D_f: 2.396835, D_gp: 0.528923, G: -2.39959, G_recon: 0.00339, G_adv: -2.43353
+Iteration 2000, D: 0.043524, D_r: -2.912225, D_f: 2.934525, D_gp: 0.212233, G: -2.84723, G_recon: 0.00809, G_adv: -2.92810
+Iteration 2200, D: 0.036004, D_r: -3.113311, D_f: 3.113678, D_gp: 0.356373, G: -3.09485, G_recon: 0.00196, G_adv: -3.11447
+Iteration 2400, D: 0.005524, D_r: -3.317954, D_f: 3.300369, D_gp: 0.231092, G: -3.29024, G_recon: 0.00172, G_adv: -3.30743
+Iteration 2600, D: 0.018083, D_r: -3.387203, D_f: 3.355914, D_gp: 0.493723, G: -3.34159, G_recon: 0.00164, G_adv: -3.35799
+Iteration 2800, D: 0.022529, D_r: -3.540082, D_f: 3.542085, D_gp: 0.205258, G: -3.51957, G_recon: 0.00200, G_adv: -3.53957
+Iteration 3000, D: 0.013752, D_r: -3.805894, D_f: 3.785974, D_gp: 0.336722, G: -3.76867, G_recon: 0.00153, G_adv: -3.78395
+Iteration 3200, D: -0.004053, D_r: -3.986676, D_f: 3.959759, D_gp: 0.228641, G: -3.93720, G_recon: 0.00139, G_adv: -3.95114
+Iteration 3400, D: -0.010046, D_r: -3.850847, D_f: 3.814811, D_gp: 0.259900, G: -3.80634, G_recon: 0.00148, G_adv: -3.82110
+Iteration 3600, D: 0.010948, D_r: -3.792613, D_f: 3.778807, D_gp: 0.247544, G: -3.76908, G_recon: 0.00154, G_adv: -3.78448
+Iteration 3800, D: 0.015149, D_r: -3.706921, D_f: 3.687271, D_gp: 0.347993, G: -3.68317, G_recon: 0.00154, G_adv: -3.69854
+Iteration 4000, D: -0.014122, D_r: -3.745836, D_f: 3.708580, D_gp: 0.231339, G: -3.70275, G_recon: 0.00137, G_adv: -3.71646
+
+Scale #10
+Iteration 0, D: 0.011930, D_r: -3.714975, D_f: 3.705194, D_gp: 0.217106, G: -2.99163, G_recon: 0.05946, G_adv: -3.58623
+Iteration 200, D: 0.008510, D_r: -3.423673, D_f: 3.401353, D_gp: 0.308304, G: -3.45762, G_recon: 0.00429, G_adv: -3.50056
+Iteration 400, D: 0.020025, D_r: -3.921930, D_f: 3.895954, D_gp: 0.460011, G: -3.82108, G_recon: 0.00404, G_adv: -3.86145
+Iteration 600, D: 0.014854, D_r: -3.510417, D_f: 3.500897, D_gp: 0.243734, G: -3.45629, G_recon: 0.00467, G_adv: -3.50302
+Iteration 800, D: 0.003424, D_r: -2.721096, D_f: 2.688710, D_gp: 0.358094, G: -2.73534, G_recon: 0.00507, G_adv: -2.78602
+Iteration 1000, D: 0.011534, D_r: -2.230810, D_f: 2.192315, D_gp: 0.500295, G: -2.21421, G_recon: 0.00396, G_adv: -2.25381
+Iteration 1200, D: 0.024686, D_r: -2.191321, D_f: 2.138778, D_gp: 0.772292, G: -2.07773, G_recon: 0.00362, G_adv: -2.11394
+Iteration 1400, D: 0.010630, D_r: -1.888648, D_f: 1.839532, D_gp: 0.597466, G: -1.83099, G_recon: 0.00341, G_adv: -1.86505
+Iteration 1600, D: 0.013580, D_r: -1.766143, D_f: 1.722912, D_gp: 0.568106, G: -1.67050, G_recon: 0.00352, G_adv: -1.70573
+Iteration 1800, D: 0.002481, D_r: -1.885683, D_f: 1.838477, D_gp: 0.496879, G: -1.80819, G_recon: 0.00358, G_adv: -1.84398
+Iteration 2000, D: -0.005097, D_r: -1.400784, D_f: 1.357571, D_gp: 0.381161, G: -1.34158, G_recon: 0.00327, G_adv: -1.37426
+Iteration 2200, D: 0.010358, D_r: -1.186575, D_f: 1.126110, D_gp: 0.708225, G: -1.10096, G_recon: 0.00297, G_adv: -1.13062
+Iteration 2400, D: -0.034666, D_r: -0.950283, D_f: 0.872900, D_gp: 0.427158, G: -0.84013, G_recon: 0.00275, G_adv: -0.86767
+Iteration 2600, D: -0.047744, D_r: -0.750050, D_f: 0.685472, D_gp: 0.168339, G: -0.64154, G_recon: 0.00281, G_adv: -0.66960
+Iteration 2800, D: -0.030442, D_r: -0.743430, D_f: 0.689870, D_gp: 0.231178, G: -0.64607, G_recon: 0.00289, G_adv: -0.67501
+Iteration 3000, D: -0.062631, D_r: -0.606246, D_f: 0.525174, D_gp: 0.184412, G: -0.49479, G_recon: 0.00269, G_adv: -0.52172
+Iteration 3200, D: 0.011763, D_r: -0.533710, D_f: 0.467208, D_gp: 0.782655, G: -0.43301, G_recon: 0.00287, G_adv: -0.46174
+Iteration 3400, D: -0.021972, D_r: -0.461973, D_f: 0.416190, D_gp: 0.238110, G: -0.39013, G_recon: 0.00278, G_adv: -0.41789
+Iteration 3600, D: 0.012604, D_r: -0.546501, D_f: 0.504467, D_gp: 0.546379, G: -0.47543, G_recon: 0.00269, G_adv: -0.50232
+Iteration 3800, D: -0.017350, D_r: -0.490933, D_f: 0.453078, D_gp: 0.205051, G: -0.42016, G_recon: 0.00273, G_adv: -0.44743
+Iteration 4000, D: 0.003199, D_r: -0.435778, D_f: 0.402864, D_gp: 0.361134, G: -0.37870, G_recon: 0.00270, G_adv: -0.40565
+
+Scale #11
+Iteration 0, D: 0.019780, D_r: -0.421060, D_f: 0.401305, D_gp: 0.395337, G: -0.14668, G_recon: 0.01793, G_adv: -0.32601
+Iteration 200, D: 0.056848, D_r: -1.484046, D_f: 1.520014, D_gp: 0.208798, G: -1.30210, G_recon: 0.00245, G_adv: -1.32657
+Iteration 400, D: 0.031581, D_r: -1.877804, D_f: 1.868770, D_gp: 0.406153, G: -1.82696, G_recon: 0.00265, G_adv: -1.85345
+Iteration 600, D: 0.076877, D_r: -1.897223, D_f: 1.923868, D_gp: 0.502322, G: -1.91298, G_recon: 0.00310, G_adv: -1.94402
+Iteration 800, D: 0.043410, D_r: -1.452825, D_f: 1.457969, D_gp: 0.382657, G: -1.40332, G_recon: 0.00249, G_adv: -1.42820
+Iteration 1000, D: 0.054983, D_r: -1.171575, D_f: 1.186603, D_gp: 0.399549, G: -1.13495, G_recon: 0.00225, G_adv: -1.15746
+Iteration 1200, D: 0.047791, D_r: -0.741824, D_f: 0.763521, D_gp: 0.260945, G: -0.71404, G_recon: 0.00240, G_adv: -0.73808
+Iteration 1400, D: 0.038532, D_r: -0.131990, D_f: 0.148105, D_gp: 0.224168, G: -0.12415, G_recon: 0.00210, G_adv: -0.14513
+Iteration 1600, D: 0.033625, D_r: -0.265425, D_f: 0.254486, D_gp: 0.445631, G: -0.19986, G_recon: 0.00207, G_adv: -0.22060
+Iteration 1800, D: 0.048354, D_r: -0.860707, D_f: 0.883886, D_gp: 0.251747, G: -0.84370, G_recon: 0.00252, G_adv: -0.86894
+Iteration 2000, D: 0.028210, D_r: -1.557707, D_f: 1.555689, D_gp: 0.302272, G: -1.52402, G_recon: 0.00231, G_adv: -1.54708
+Iteration 2200, D: 0.036733, D_r: -1.770666, D_f: 1.766478, D_gp: 0.409217, G: -1.75483, G_recon: 0.00157, G_adv: -1.77048
+Iteration 2400, D: 0.014759, D_r: -1.909747, D_f: 1.901852, D_gp: 0.226534, G: -1.89045, G_recon: 0.00158, G_adv: -1.90626
+Iteration 2600, D: 0.017835, D_r: -1.880139, D_f: 1.879879, D_gp: 0.180942, G: -1.86172, G_recon: 0.00153, G_adv: -1.87705
+Iteration 2800, D: 0.008322, D_r: -1.842449, D_f: 1.834464, D_gp: 0.163071, G: -1.80202, G_recon: 0.00142, G_adv: -1.81621
+Iteration 3000, D: 0.018613, D_r: -1.701639, D_f: 1.702229, D_gp: 0.180240, G: -1.69751, G_recon: 0.00145, G_adv: -1.71197
+Iteration 3200, D: 0.004142, D_r: -1.766344, D_f: 1.757540, D_gp: 0.129460, G: -1.74320, G_recon: 0.00138, G_adv: -1.75701
+Iteration 3400, D: 0.007209, D_r: -1.742067, D_f: 1.736380, D_gp: 0.128956, G: -1.72542, G_recon: 0.00137, G_adv: -1.73910
+Iteration 3600, D: 0.015031, D_r: -1.811612, D_f: 1.799523, D_gp: 0.271196, G: -1.78376, G_recon: 0.00137, G_adv: -1.79742
+Iteration 3800, D: 0.007303, D_r: -1.714943, D_f: 1.701319, D_gp: 0.209278, G: -1.67488, G_recon: 0.00137, G_adv: -1.68858
+Iteration 4000, D: 0.005388, D_r: -1.727780, D_f: 1.720447, D_gp: 0.127207, G: -1.70929, G_recon: 0.00140, G_adv: -1.72330
+
+Scale #12
+Iteration 0, D: 0.009137, D_r: -1.701838, D_f: 1.691150, D_gp: 0.198254, G: -1.58590, G_recon: 0.00886, G_adv: -1.67447
+Iteration 200, D: 0.041904, D_r: -1.046692, D_f: 1.044728, D_gp: 0.438683, G: -1.03714, G_recon: 0.00309, G_adv: -1.06799
+Iteration 400, D: 0.056746, D_r: -0.627276, D_f: 0.626577, D_gp: 0.574444, G: -0.59333, G_recon: 0.00323, G_adv: -0.62564
+Iteration 600, D: 0.037369, D_r: -0.482848, D_f: 0.493875, D_gp: 0.263425, G: -0.47111, G_recon: 0.00279, G_adv: -0.49900
+Iteration 800, D: 0.050996, D_r: -0.388111, D_f: 0.389811, D_gp: 0.492963, G: -0.35616, G_recon: 0.00335, G_adv: -0.38970
+Iteration 1000, D: 0.055345, D_r: -0.917527, D_f: 0.934048, D_gp: 0.388245, G: -0.87889, G_recon: 0.00319, G_adv: -0.91079
+Iteration 1200, D: 0.043579, D_r: -1.262568, D_f: 1.260932, D_gp: 0.452160, G: -1.23498, G_recon: 0.00293, G_adv: -1.26425
+Iteration 1400, D: 0.071950, D_r: -0.674262, D_f: 0.693995, D_gp: 0.522171, G: -0.65342, G_recon: 0.00334, G_adv: -0.68685
+Iteration 1600, D: 0.061723, D_r: -0.464274, D_f: 0.475407, D_gp: 0.505896, G: -0.44069, G_recon: 0.00341, G_adv: -0.47480
+Iteration 1800, D: 0.025763, D_r: -0.336994, D_f: 0.329846, D_gp: 0.329101, G: -0.28316, G_recon: 0.00269, G_adv: -0.31003
+Iteration 2000, D: 0.041776, D_r: -0.008753, D_f: -0.007112, D_gp: 0.576411, G: 0.02618, G_recon: 0.00299, G_adv: -0.00377
+Iteration 2200, D: 0.013557, D_r: -0.059324, D_f: 0.049468, D_gp: 0.234139, G: -0.02442, G_recon: 0.00231, G_adv: -0.04751
+Iteration 2400, D: 0.002264, D_r: 0.052180, D_f: -0.064904, D_gp: 0.149881, G: 0.09242, G_recon: 0.00226, G_adv: 0.06985
+Iteration 2600, D: -0.003700, D_r: 0.031476, D_f: -0.044775, D_gp: 0.095985, G: 0.07368, G_recon: 0.00223, G_adv: 0.05143
+Iteration 2800, D: 0.003901, D_r: -0.004178, D_f: -0.008118, D_gp: 0.161979, G: 0.03292, G_recon: 0.00220, G_adv: 0.01095
+Iteration 3000, D: 0.017704, D_r: 0.035176, D_f: -0.049823, D_gp: 0.323519, G: 0.07501, G_recon: 0.00219, G_adv: 0.05311
+Iteration 3200, D: 0.003161, D_r: 0.044262, D_f: -0.052754, D_gp: 0.116530, G: 0.07696, G_recon: 0.00224, G_adv: 0.05457
+Iteration 3400, D: 0.028412, D_r: -0.049956, D_f: 0.051769, D_gp: 0.265988, G: -0.03070, G_recon: 0.00222, G_adv: -0.05292
+Iteration 3600, D: 0.027881, D_r: -0.063140, D_f: 0.061489, D_gp: 0.295321, G: -0.03196, G_recon: 0.00217, G_adv: -0.05367
+Iteration 3800, D: 0.010169, D_r: -0.066563, D_f: 0.058503, D_gp: 0.182284, G: -0.03438, G_recon: 0.00216, G_adv: -0.05594
+Iteration 4000, D: 0.008351, D_r: -0.082877, D_f: 0.068697, D_gp: 0.225312, G: -0.03730, G_recon: 0.00221, G_adv: -0.05938
+
+Scale #13
+Iteration 0, D: 0.012127, D_r: -0.012256, D_f: -0.040135, D_gp: 0.645185, G: 1.30603, G_recon: 0.13078, G_adv: -0.00173
+Iteration 200, D: 0.058060, D_r: -0.610314, D_f: 0.624193, D_gp: 0.441805, G: -0.51397, G_recon: 0.00760, G_adv: -0.58995
+Iteration 400, D: 0.001622, D_r: -1.348136, D_f: 1.306405, D_gp: 0.433536, G: -1.22243, G_recon: 0.01150, G_adv: -1.33739
+Iteration 600, D: 0.015526, D_r: -0.797300, D_f: 0.758533, D_gp: 0.542925, G: -0.59886, G_recon: 0.01062, G_adv: -0.70508
+Iteration 800, D: 0.023077, D_r: -0.621000, D_f: 0.603108, D_gp: 0.409692, G: -0.50470, G_recon: 0.00869, G_adv: -0.59158
+Iteration 1000, D: 0.019928, D_r: -0.677938, D_f: 0.665744, D_gp: 0.321220, G: -0.57951, G_recon: 0.00769, G_adv: -0.65638
+Iteration 1200, D: 0.019076, D_r: -0.922675, D_f: 0.893499, D_gp: 0.482520, G: -0.79915, G_recon: 0.00699, G_adv: -0.86904
+Iteration 1400, D: 0.024645, D_r: -0.805829, D_f: 0.795245, D_gp: 0.352291, G: -0.72239, G_recon: 0.00723, G_adv: -0.79472
+Iteration 1600, D: 0.036547, D_r: -1.078747, D_f: 1.054772, D_gp: 0.605207, G: -1.01069, G_recon: 0.00541, G_adv: -1.06478
+Iteration 1800, D: 0.012971, D_r: -1.342915, D_f: 1.318117, D_gp: 0.377687, G: -1.26356, G_recon: 0.00772, G_adv: -1.34076
+Iteration 2000, D: 0.054957, D_r: -1.404477, D_f: 1.387453, D_gp: 0.719814, G: -1.29906, G_recon: 0.00599, G_adv: -1.35899
+Iteration 2200, D: 0.024701, D_r: -1.230904, D_f: 1.210370, D_gp: 0.452357, G: -1.16939, G_recon: 0.00467, G_adv: -1.21604
+Iteration 2400, D: 0.015266, D_r: -1.140822, D_f: 1.122626, D_gp: 0.334621, G: -1.07861, G_recon: 0.00455, G_adv: -1.12409
+Iteration 2600, D: 0.008275, D_r: -1.060034, D_f: 1.045713, D_gp: 0.225956, G: -0.99985, G_recon: 0.00454, G_adv: -1.04520
+Iteration 2800, D: -0.020311, D_r: -1.055124, D_f: 0.996298, D_gp: 0.385140, G: -0.92237, G_recon: 0.00449, G_adv: -0.96731
+Iteration 3000, D: 0.028450, D_r: -1.036034, D_f: 1.014524, D_gp: 0.499602, G: -0.95958, G_recon: 0.00443, G_adv: -1.00384
+Iteration 3200, D: 0.007277, D_r: -1.053296, D_f: 1.043790, D_gp: 0.167826, G: -0.97766, G_recon: 0.00460, G_adv: -1.02367
+Iteration 3400, D: 0.002711, D_r: -1.082177, D_f: 1.060896, D_gp: 0.239920, G: -1.03265, G_recon: 0.00456, G_adv: -1.07822
+Iteration 3600, D: 0.024176, D_r: -1.077376, D_f: 1.058161, D_gp: 0.433918, G: -1.00950, G_recon: 0.00445, G_adv: -1.05403
+Iteration 3800, D: -0.016497, D_r: -1.040619, D_f: 1.014361, D_gp: 0.097609, G: -0.95229, G_recon: 0.00444, G_adv: -0.99668
+Iteration 4000, D: 0.004026, D_r: -1.060996, D_f: 1.046900, D_gp: 0.181216, G: -0.98159, G_recon: 0.00437, G_adv: -1.02533
+
+Scales:
+s0, size: 26x34, amp: 1.000
+s1, size: 32x43, amp: 0.040
+s2, size: 41x55, amp: 0.023
+s3, size: 53x70, amp: 0.019
+s4, size: 67x90, amp: 0.018
+s5, size: 86x115, amp: 0.014
+s6, size: 110x147, amp: 0.016
+s7, size: 141x187, amp: 0.017
+s8, size: 180x240, amp: 0.012
+s9, size: 230x306, amp: 0.016
+s10, size: 294x392, amp: 0.010
+s11, size: 376x501, amp: 0.010
+s12, size: 480x640, amp: 0.011
